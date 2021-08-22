@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,102 @@
     <title>Assignment - 5</title>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/CSS/styles.css">
+    <!-- Tailwind CSS -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body>
+    <!-- Header Area -->
+    <header>
+
+    </header>
+    <!-- Main Area -->
+    <main>
+        <section class="container mx-auto px-4 md:px-2 pt-9">
+            <!-- Top Part -->
+            <div class="grid grid-cols-2 px-12 justify-items-center">
+                <!-- Image -->
+                <div class="p-5 m-5 h-96 w-full">
+                    <img id="portrait" src="/images/mac.png" alt="">
+                </div>
+                <!-- Selection Area -->
+                <div class="p-5 m-5">
+                    <div>
+                        <h2 class="text-4xl">Customize your Blue 24-inch<br>iMac with Apple M1 Chip.</h2>
+                        <p class="pt-3">
+                            The M1 chip brings the Apple Neural Engine to the Mac, greatly accelerating machine learning (ML) tasks. Featuring Apple's most advanced 16-core architecture capable of 11 trillion operations per second, the Neural Engine in M1 enables up to 15x faster machine learning performance.
+                        </p>
+                    </div>
+                    <!-- Memory -->
+                    <div class="pt-8">
+                        <h1 class="text-xl font-bold">Memory</h1>
+                        <!-- Buttons -->
+                        <div id="memoryButtons" class="pt-4">
+                            <button id="memory8" class="p-2 px-3 border shadow hover:shadow-lg rounded">8gb Unified Memory</button>
+                            <button id="memory16" class="p-2 px-3 border shadow hover:shadow-lg rounded">16gb Unified Memory</button>
+                        </div>
+                    </div>
+                    <div class="pt-8">
+                        <h1 class="text-xl font-bold">Storage</h1>
+                        <!-- Buttons -->
+                        <div class="pt-4">
+                            <button id="storage256" class="p-2 px-3 border shadow hover:shadow-lg rounded">256GB SSD storage</button>
+                            <button id="storage512" class="p-2 px-3 border shadow hover:shadow-lg rounded">512GB SSD storage</button>
+                            <button id="storage1000" class="p-2 px-3 border shadow hover:shadow-lg rounded">1TB SSD storage</button>
+                        </div>
+                    </div>
+                    <div class="pt-8">
+                        <h1 class="text-xl font-bold">Choose your delivery option</h1>
+                        <!-- Buttons -->
+                        <div id="deliveryButtons" class="pt-4">
+                            <button id="freeDelivery" class="p-2 px-3 border shadow hover:shadow-lg rounded">Friday, Aug 25 FREE Prime Delivery</button>
+                            <button id="fastDelivery" class="p-2 px-3 border shadow hover:shadow-lg rounded">Monday, Aug 21 Delivery Charge $20</button>
+                        </div>
+                    </div>
+                    <!-- Cart -->
+                    <div class="container pt-8 w-5/12">
+                        <div class="py-2 font-bold border-b-2 flex justify-between">
+                            <div><h4 >Best price:</h4></div>
+                            <div>$<span id="basePrice">1299</span></div>
+                        </div>
+                        <div class="py-2 font-bold border-b-2 flex justify-between">
+                            <div><h4 >Extra Memory Cost:</h4></div>
+                            <div>$<span id="baseMemoryCost">0</span></div>
+                        </div>
+                        <div class="py-2 font-bold border-b-2 flex justify-between">
+                            <div><h4 >Extra Storage Cost:</h4></div>
+                            <div>$<span id="baseStorageCost">0</span></div>
+                        </div>
+                        <div class="py-2 font-bold border-b-2 border-black flex justify-between">
+                            <div><h4 >Delivery Charge:</h4></div>
+                            <div>$<span id="regularDelivery">0</span></div>
+                        </div>
+                        <!-- Total Price -->
+                        <div class="py-2 font-bold flex justify-between">
+                            <div><h4>Total Price:</h4></div>
+                            <div>$<span id="totalPrice" class="grandTotal">1299</span></div>
+                        </div>
+                    </div>
+                    <!-- Promo Code -->
+                    <div class="pt-6">
+                        <h1 class="text-xl font-semibold">Add Promo Code</h1>
+                        <div>
+                            <input id="promoCode" class="py-1 px-3 border rounded-md border-gray-400" type="text" placeholder="Type the Promo Code">
+                            <button id="promobtn" class="applyPromo py-1 px-3 bg-red-500 rounded-md hover:bg-red-700">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Area -->
+    <footer class="container mx-auto px-12 pt-1 pb-9">
+        <div class="border-t-2 text-center pt-4 text-4xl">
+            <h4>Total Price: $<span class="grandTotal">1299</span></h4>
+        </div>
+    </footer>
     <!-- Custom JS -->
     <script src="/JS/script.js"></script>
 </body>
+
 </html>
