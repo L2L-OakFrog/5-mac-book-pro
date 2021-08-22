@@ -146,11 +146,13 @@ function updateTotal()
     }
     else
     {
-        //onclick = alert('wrong');
+        console.log('sorry');
     }
 }
+
+// Apply Button
 const promoBtn = document.getElementById('promoBtn');
 promoBtn.addEventListener('click', function ()
 {
     updateTotal();
-})
+});
