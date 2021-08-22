@@ -123,6 +123,7 @@ fastDelivery.addEventListener('click', function ()
 
 // total price
 const total = document.getElementById('totalPrice');
+// Cart
 function updateTotal()
 {
     const intBasePrice = parseInt(basePrice.innerText);
@@ -131,19 +132,25 @@ function updateTotal()
     const intDeliveryCost = parseInt(deliveryPrice.innerText);
     const updatedTotal = intBasePrice + intMemoryPrice + intStoragePrice + intDeliveryCost;
     total.innerText = updatedTotal;
+    // Footer Total
+    const grandTotal = document.getElementById('grandTotal');
+    grandTotal.innerText = total.innerText;
+    const grand = grandTotal.innerText;
+    // Promo
+    const promoField = document.getElementById('promoCode');
+    if (promoField.value == 'stevekaku')
+    {
+        const discount = total.innerText / 5;
+        const afterDiscount = grand - discount;
+        grandTotal.innerText = afterDiscount;
+    }
+    else
+    {
+        //onclick = alert('wrong');
+    }
 }
-
-// Grand Total
-/* const grandTotal = document.getElementsByClassName('grandTotal')
-for (const grand of grandTotal)
-{
-    updateTotal(grand);
-} */
-// Coupon Code
-/* const promoBtn = document.getElementById("promobtn");
+const promoBtn = document.getElementById('promoBtn');
 promoBtn.addEventListener('click', function ()
 {
-    if ()
-}
-)
- */
+    updateTotal();
+})
